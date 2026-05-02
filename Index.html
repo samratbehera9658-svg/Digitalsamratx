@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Digital Store</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+  text-align:center;
+}
+
+header{
+  padding:40px 20px;
+}
+
+h1{
+  font-size:28px;
+}
+
+.products{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:20px;
+}
+
+.card{
+  background:#1e293b;
+  margin:15px;
+  padding:20px;
+  width:260px;
+  border-radius:20px;
+  box-shadow:0 0 15px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+button{
+  margin-top:10px;
+  padding:12px 22px;
+  border:2px solid white;
+  background:transparent;
+  color:white;
+  border-radius:25px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:white;
+  color:black;
+}
+
+button:active{
+  transform:scale(0.9);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🚀 My Digital Store</h1>
+  <p>Buy my premium PDFs</p>
+</header>
+
+<div class="products">
+
+  <div class="card">
+    <h2>📘 Instagram Growth PDF</h2>
+    <p>Learn how to grow fast</p>
+    <button onclick="buy('Instagram Growth PDF')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h2>📗 YouTube Guide</h2>
+    <p>Start & grow channel</p>
+    <button onclick="buy('YouTube Guide')">Buy Now</button>
+  </div>
+
+</div>
+
+<script>
+function buy(product){
+  var phone = "919658187473"; // 👉 apna number yahan daalo
+  var msg = "Hello, mujhe " + product + " buy karna hai";
+
+  var link = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(msg);
+
+  window.location.href = link;
+}
+</script>
+
+</body>
+</html>
